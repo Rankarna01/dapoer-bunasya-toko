@@ -138,15 +138,20 @@ class OrderController extends Controller
         // --- F. INTEGRASI MIDTRANS MULAI DISINI ---
         
         // Set konfigurasi midtrans
+         // Set konfigurasi midtrans
         Config::$serverKey = config('midtrans.server_key');
         Config::$isProduction = config('midtrans.is_production');
         Config::$isSanitized = config('midtrans.is_sanitized');
         Config::$is3ds = config('midtrans.is_3ds');
 
+        // 🔥 TAMBAHKAN BARIS INI (JURUS PAKSA NOTIFIKASI) 🔥
+        // Ganti URL ini dengan domain hostinger kamu yang valid
+        Config::$overrideNotifUrl = 'https://lime-goose-354032.hostingersite.com/midtrans-callback';
+
         // Buat params untuk dikirim ke Midtrans
         $params = [
             'transaction_details' => [
-                'order_id' => $order->id . '-' . rand(), // Tambah rand agar ID unik jika testing berulang
+                'order_id' => $order->id . '-' . rand(), 
                 'gross_amount' => (int) $order->total_price,
             ],
             'customer_details' => [
