@@ -107,6 +107,12 @@
                 class="{{ request()->routeIs('admin.reports*') ? 'bg-secondary text-white shadow-lg shadow-secondary/20' : 'text-gray-400 hover:bg-[#222] hover:text-white' }} flex items-center px-4 py-3 rounded-xl transition duration-200">
                 <i class="fa-solid fa-file-invoice-dollar w-6"></i> Keuangan
             </a>
+             <p class="text-xs font-bold text-gray-500 uppercase px-2 mt-6 mb-2 tracking-wider">Analitik</p>
+
+            <a href="{{ route('admin.trends.index') }}"
+                class="{{ request()->routeIs('admin.trends*') ? 'bg-secondary text-white shadow-lg shadow-secondary/20' : 'text-gray-400 hover:bg-[#222] hover:text-white' }} flex items-center px-4 py-3 rounded-xl transition duration-200">
+                <i class="fa-solid fa-chart-pie w-6"></i> Trend Produk
+            </a>
         </nav>
 
         <div class="p-4 border-t border-gray-800">
@@ -137,6 +143,7 @@
                     class="text-sm text-secondary hover:text-white transition flex items-center gap-2">
                     <i class="fa-solid fa-globe"></i> <span class="hidden md:inline">Lihat Website</span>
                 </a>
+                
             </div>
         </header>
 

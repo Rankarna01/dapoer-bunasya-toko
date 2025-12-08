@@ -80,7 +80,10 @@ Route::prefix('admin')->middleware(['auth', 'role:admin'])->name('admin.')->grou
     // Manajemen Produk (Resource Controller)
     Route::resource('products', ProductController::class);
     // ... route admin lainnya ...
-    
+     Route::get('/laporan', [\App\Http\Controllers\ReportController::class, 'index'])->name('reports.index');
+
+    // --- TAMBAHKAN INI (Menu Trend & Analitik) ---
+    Route::get('/trends', [\App\Http\Controllers\TrendController::class, 'index'])->name('trends.index');
     // Manajemen Laporan Keuangan (Tambahkan baris ini)
     Route::get('/laporan', [\App\Http\Controllers\ReportController::class, 'index'])->name('reports.index');
 

@@ -235,7 +235,7 @@
 
                 <div class="space-y-4">
                     <a href="/" class="text-2xl font-bold text-secondary tracking-widest flex items-center gap-2 mb-4">
-                        <i class="fa-solid fa-cake-candles"></i> BAKERY<span class="text-white">LUXE</span>
+                        <i class="fa-solid fa-cake-candles"></i> Dapoer<span class="text-white">Bunasya</span>
                     </a>
                     <p class="text-gray-400 text-sm leading-relaxed">
                         Menghadirkan kebahagiaan di setiap gigitan. Kue premium dengan bahan berkualitas tinggi untuk momen
